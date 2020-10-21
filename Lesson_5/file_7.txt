@@ -1,0 +1,5 @@
+Apple inc 273.86 215.44
+Microsoft corp 143.02 98.74
+Facebook inc 75.16 51.64
+Amazon inc 321.78 308.6
+Moderna inc 105.8 593.1
