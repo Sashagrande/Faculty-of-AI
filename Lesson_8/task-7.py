@@ -3,18 +3,11 @@ import re
 
 class Complex:
     def __init__(self, com_num):
-        self.com_num = com_num
+        self.com_num = com_num.replace(' ', '')
         print(self.com_num)
-        a = re.findall('[0-9]+', self.com_num)
+        a = re.findall('[-]?\d+', self.com_num)
+        print(a)
         a = [int(i) for i in a]
-        if self.com_num.count('-') == 2:
-            a[0] = 0 - a[0]
-            a[1] = 0 - a[1]
-        elif self.com_num.count('-') == 1:
-            if self.com_num.index('-') < 2:
-                a[0] = 0 - a[0]
-            else:
-                a[1] = 0 - a[1]
         self.com_num = a
 
     def __add__(self, other):
@@ -39,7 +32,6 @@ a2 = Complex(input('Введите комплексное число в форм
 
 print(a1 + a2)
 print(a1 * a2)
-
 
 # Вариант решения чуть-чуть проще
 # class Complex:
